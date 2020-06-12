@@ -26,7 +26,7 @@ function save_wordpress_featured_image_setter_admin_stuff(){
             $admin_notice = "success";
     
             // redirect the user to the appropriate page
-            $this->custom_redirect( $admin_notice, $_POST );
+            
             exit;
         } else {
             wp_die( __( 'Invalid nonce specified', 'wordpress-featured-image-setter' ), __( 'Error', 'wordpress-featured-image-setter' ), array(
