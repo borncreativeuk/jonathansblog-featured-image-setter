@@ -43,7 +43,7 @@ wp_enqueue_media();
 </div>
 <script type="text/javascript">
 jQuery(document).ready(function($){
-    if ($('#image_id').val) {
+    if ($('#image_id').val()) {
         $('#apply-btn').show()
     } else {
         $('#apply-btn').hide()
@@ -64,7 +64,7 @@ jQuery(document).ready(function($){
             var image_id = uploaded_image.toJSON().id;
             // Let's assign the url value to the input field
             $('#image_id').val(image_id);
-            if ($('#image_id').val) {
+            if ($('#image_id').val()) {
                 $('#apply-btn').show()
             }
         });
