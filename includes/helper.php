@@ -11,7 +11,7 @@ function count_all_posts_without_featured_image_set(){
         )
      );
      $query = new WP_Query($args);
-     return $query->post_count;
+     return $query->found_posts;
 }
 
 function count_all_posts_with_featured_image_set(){
@@ -25,5 +25,5 @@ function count_all_posts_with_featured_image_set(){
         )
      );
      $query = new WP_Query($args);
-     return $query->post_count;
+     return $query->found_posts;
 }
