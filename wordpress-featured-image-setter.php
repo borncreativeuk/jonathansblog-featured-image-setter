@@ -1,6 +1,6 @@
 <?php
   /*
-  Plugin name: wordpress featured image setter
+  Plugin name: jonathansblog featured image setter
   Plugin URI: https://jonathansblog.co.uk/
   Description: plugin to set all posts without featured image to have an image
   Author: Jonathan Mitchell
@@ -9,38 +9,38 @@
   */
 
 // include vendor autoload if present
-if (file_exists(WP_PLUGIN_DIR . '/wordpress-featured-image-setter/vendor/autoload.php')) {
-	require_once WP_PLUGIN_DIR . '/wordpress-featured-image-setter/vendor/autoload.php';
+if (file_exists(WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/vendor/autoload.php')) {
+	require_once WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/vendor/autoload.php';
 }
 
 // include admin page if present
-if (file_exists(WP_PLUGIN_DIR . '/wordpress-featured-image-setter/includes/wordpress-featured-image-setter-admin.php')) {
-	require_once WP_PLUGIN_DIR . '/wordpress-featured-image-setter/includes/wordpress-featured-image-setter-admin.php';
+if (file_exists(WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/includes/jonathansblog-featured-image-setter-admin.php')) {
+	require_once WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/includes/jonathansblog-featured-image-setter-admin.php';
 }
 
 // helper functions
-if (file_exists(WP_PLUGIN_DIR . '/wordpress-featured-image-setter/includes/helper.php')) {
-	require_once WP_PLUGIN_DIR . '/wordpress-featured-image-setter/includes/helper.php';
+if (file_exists(WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/includes/helper.php')) {
+	require_once WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/includes/helper.php';
 }
 
 
-register_activation_hook( __FILE__, 'wordpress_featured_image_setter_activate' );
-function wordpress_featured_image_setter_activate() {
+register_activation_hook( __FILE__, 'jonathansblog_featured_image_setter_activate' );
+function jonathansblog_featured_image_setter_activate() {
     //code 
 }
  
-register_deactivation_hook( __FILE__, 'wordpress_featured_image_setter_deactivate' );
-function wordpress_featured_image_setter_deactivate() {
+register_deactivation_hook( __FILE__, 'jonathansblog_featured_image_setter_deactivate' );
+function jonathansblog_featured_image_setter_deactivate() {
     //code
 }
 
-register_uninstall_hook( __FILE__, 'wordpress_featured_image_setter_uninstall' );
-function wordpress_featured_image_setter_uninstall() {
+register_uninstall_hook( __FILE__, 'jonathansblog_featured_image_setter_uninstall' );
+function jonathansblog_featured_image_setter_uninstall() {
     //code 
 }
 
-add_action( 'init', 'wordpress_featured_image_setter_dostuff' );
-function wordpress_featured_image_setter_dostuff(){
+add_action( 'init', 'jonathansblog_featured_image_setter_dostuff' );
+function jonathansblog_featured_image_setter_dostuff(){
 	//code
 }
 

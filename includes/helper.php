@@ -62,10 +62,10 @@ wp_enqueue_media();
 <div>
 
 
-<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" id="wordpress-featured-image-setter-form" >			
-	<input type="hidden" name="action" value="wordpress_featured_image_setter_form_response">
+<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" id="jonathansblog-featured-image-setter-form" >			
+	<input type="hidden" name="action" value="jonathansblog_featured_image_setter_form_response">
 <?php
-wp_nonce_field('wordpress-featured-image-setter-form-nonce');
+wp_nonce_field('jonathansblog-featured-image-setter-form-nonce');
 ?>
     <input type="hidden" name="image_id" id="image_id" class="regular-text">
     <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Select Image">
