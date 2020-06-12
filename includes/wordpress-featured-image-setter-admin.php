@@ -12,8 +12,9 @@ function wordpress_featured_image_setter_admin_view(){
 	}
 }
 
+
 add_action('admin_post_wordpress_featured_image_setter_form_response', 'save_wordpress_featured_image_setter_admin_stuff');
-function wordpress_featured_image_setter_admin_stuff(){
+function save_wordpress_featured_image_setter_admin_stuff(){
         if( !empty( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wordpress-featured-image-setter-form-nonce') ) {
     
             // sanitize the input
