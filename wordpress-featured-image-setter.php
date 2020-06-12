@@ -18,6 +18,12 @@ if (file_exists(WP_PLUGIN_DIR . '/wordpress-featured-image-setter/includes/wordp
 	require_once WP_PLUGIN_DIR . '/wordpress-featured-image-setter/includes/wordpress-featured-image-setter-admin.php';
 }
 
+// helper functions
+if (file_exists(WP_PLUGIN_DIR . '/wordpress-featured-image-setter/includes/helper.php')) {
+	require_once WP_PLUGIN_DIR . '/wordpress-featured-image-setter/includes/helper.php';
+}
+
+
 register_activation_hook( __FILE__, 'wordpress_featured_image_setter_activate' );
 function wordpress_featured_image_setter_activate() {
     //code 
