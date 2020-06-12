@@ -1,6 +1,6 @@
 <?php
   /*
-  Plugin name: wordpress featured image- etter
+  Plugin name: wordpress featured image-setter
   Plugin URI: https://jonathansblog.co.uk/
   Description: plugin to set all posts without featured image to have an image
   Author: Jonathan Mitchell
