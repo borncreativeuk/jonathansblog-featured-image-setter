@@ -6,6 +6,8 @@
   Author: Jonathan Mitchell
   Author URI: https://jonathansblog.co.uk/
   Version: 0.1
+  License: GPL v3 or later
+  License URI: https://www.gnu.org/licenses/gpl-3.0.html
   */
 
 // include admin page if present
