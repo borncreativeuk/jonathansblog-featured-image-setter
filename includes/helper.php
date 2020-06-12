@@ -34,12 +34,20 @@ wp_enqueue_script('jquery');
 // This will enqueue the Media Uploader script
 wp_enqueue_media();
 ?>
-    <div>
+<div>
+
+
+<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" id="wordpress-featured-image-setter-form" >			
+	<input type="hidden" name="action" value="wordpress_featured_image_setter_form_response">
+<?php
+wp_nonce_field('wordpress-featured-image-setter-form-nonce');
+?>
+
     <label for="image_url">Set Featured Image</label>
     <input type="hidden" name="image_id" id="image_id" class="regular-text">
     <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Select Image">
     <input type="button" name="apply-btn" id="apply-btn" class="button-secondary" value="Apply" style="display:none;">
-
+</form>
 </div>
 <script type="text/javascript">
 jQuery(document).ready(function($){

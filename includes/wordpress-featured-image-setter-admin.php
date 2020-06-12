@@ -11,3 +11,27 @@ function wordpress_featured_image_setter_admin_view(){
 		require_once WP_PLUGIN_DIR . '/wordpress-featured-image-setter/views/wordpress-featured-image-setter-admin-view.php';
 	}
 }
+
+add_action('admin_post_wordpress_featured_image_setter_form_response', 'save_wordpress_featured_image_setter_admin_stuff');
+function wordpress_featured_image_setter_admin_stuff(){
+        if( !empty( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wordpress-featured-image-setter-form-nonce') ) {
+    
+            // sanitize the input
+            echo 'here';
+            // do the processing
+    
+
+            // add the admin notice
+            $admin_notice = "success";
+    
+            // redirect the user to the appropriate page
+            $this->custom_redirect( $admin_notice, $_POST );
+            exit;
+        } else {
+            wp_die( __( 'Invalid nonce specified', 'wordpress-featured-image-setter' ), __( 'Error', 'wordpress-featured-image-setter' ), array(
+                        'response' 	=> 403,
+                        'back_link' => 'admin.php?page=wordpress-featured-image-setter',
+    
+                ) );
+        }
+}
