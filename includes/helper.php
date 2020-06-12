@@ -36,12 +36,18 @@ wp_enqueue_media();
 ?>
     <div>
     <label for="image_url">Set Featured Image</label>
-    <input type="text" name="image_url" id="image_url" class="regular-text">
+    <input type="hidden" name="image_id" id="image_id" class="regular-text">
     <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Select Image">
+    <input type="button" name="apply-btn" id="apply-btn" class="button-secondary" value="Apply" style="display:none;">
 
 </div>
 <script type="text/javascript">
 jQuery(document).ready(function($){
+    if ($('#image_id').val)) {
+        $('#apply-btn').show()
+    } else {
+        $('#apply-btn').hide()
+    }
     $('#upload-btn').click(function(e) {
         e.preventDefault();
         var image = wp.media({ 
@@ -57,7 +63,10 @@ jQuery(document).ready(function($){
             console.log(uploaded_image);
             var image_id = uploaded_image.toJSON().id;
             // Let's assign the url value to the input field
-            $('#image_url').val(image_id);
+            $('#image_id').val(image_id);
+            if ($('#image_id').val)) {
+                $('#apply-btn').show()
+            }
         });
     });
 });
