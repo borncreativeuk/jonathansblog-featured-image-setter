@@ -15,6 +15,7 @@ function wordpress_featured_image_setter_admin_view(){
 
 add_action('admin_post_wordpress_featured_image_setter_form_response', 'save_wordpress_featured_image_setter_admin_stuff');
 function save_wordpress_featured_image_setter_admin_stuff(){
+    $url = admin_url('options-general.php?page=Set+Missing+Featured+Images');
         if( !empty( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wordpress-featured-image-setter-form-nonce') ) {
     
             // sanitize the input
@@ -27,11 +28,12 @@ function save_wordpress_featured_image_setter_admin_stuff(){
     
             // redirect the user to the appropriate page
             
-            exit;
+            wp_safe_redirect($url); 
+            exit();
         } else {
             wp_die( __( 'Invalid nonce specified', 'wordpress-featured-image-setter' ), __( 'Error', 'wordpress-featured-image-setter' ), array(
                         'response' 	=> 403,
-                        'back_link' => 'admin.php?page=wordpress-featured-image-setter',
+                        'back_link' => $url,
     
                 ) );
         }
