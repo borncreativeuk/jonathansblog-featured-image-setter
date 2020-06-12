@@ -19,16 +19,12 @@ function save_wordpress_featured_image_setter_admin_stuff(){
         if( !empty( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wordpress-featured-image-setter-form-nonce') ) {
     
             // sanitize the input
-            print_r($_REQUEST);
+            $image_id=absint($_REQUEST['image_id']);
             // do the processing
-    
-
-            // add the admin notice
-            $admin_notice = "success";
-    
+            set_all_posts_without_featured_image_set($image_id);
             // redirect the user to the appropriate page
             
-            //wp_safe_redirect($url); 
+            wp_safe_redirect($url); 
             exit();
         } else {
             wp_die( __( 'Invalid nonce specified', 'wordpress-featured-image-setter' ), __( 'Error', 'wordpress-featured-image-setter' ), array(

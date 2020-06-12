@@ -5,13 +5,13 @@ function count_all_posts_without_featured_image_set(){
         'post_type'  => 'post',
         'meta_query' => array(
             array(
-             'key' => '_thumbnail_id',
-             'compare' => 'NOT EXISTS'
+              'key' => '_thumbnail_id',
+              'compare' => 'NOT EXISTS'
             ),
         )
-     );
-     $query = new WP_Query($args);
-     return $query->found_posts;
+    );
+    $query = new WP_Query($args);
+    return $query->found_posts;
 }
 
 function count_all_posts_with_featured_image_set(){
@@ -19,14 +19,39 @@ function count_all_posts_with_featured_image_set(){
         'post_type'  => 'post',
         'meta_query' => array(
             array(
-             'key' => '_thumbnail_id',
-             'compare' => 'EXISTS'
+              'key' => '_thumbnail_id',
+              'compare' => 'EXISTS'
             ),
         )
-     );
-     $query = new WP_Query($args);
-     return $query->found_posts;
+    );
+    $query = new WP_Query($args);
+    return $query->found_posts;
 }
+
+
+function set_all_posts_without_featured_image_set($image_id){
+    $args = array(
+        'post_type'  => 'post',
+        'meta_query' => array(
+            array(
+              'key' => '_thumbnail_id',
+              'compare' => 'NOT EXISTS'
+            ),
+        )
+    );
+    $query = new WP_Query($args);
+    // loop and set
+    if ( $query->have_posts() ) {
+        while ( $query->have_posts() ) {
+            $query->the_post();
+            set_post_thumbnail($query->post->ID, $image_id);
+        }
+    } 
+    /* Restore original Post Data */
+    wp_reset_postdata();
+}
+
+
 
 function show_media_library() {
     // jQuery
