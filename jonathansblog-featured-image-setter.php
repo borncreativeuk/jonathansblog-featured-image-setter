@@ -1,7 +1,7 @@
 <?php
   /*
   Plugin name: jonathansblog featured image setter
-  Plugin URI: https://jonathansblog.co.uk/
+  Plugin URI: https://github.com/localhost8080/jonathansblog-featured-image-setter
   Description: plugin to set all posts without featured image to have an image
   Author: Jonathan Mitchell
   Author URI: https://jonathansblog.co.uk/
