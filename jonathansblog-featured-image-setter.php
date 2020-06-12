@@ -24,12 +24,12 @@
   */
 
 // include admin page if present
-if (file_exists(WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/includes/jonathansblog-featured-image-setter-admin.php')) {
-	require_once WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/includes/jonathansblog-featured-image-setter-admin.php';
+if (file_exists(plugin_dir_path(__FILE__) . 'includes/jonathansblog-featured-image-setter-admin.php')) {
+	require_once plugin_dir_path(__FILE__) . 'includes/jonathansblog-featured-image-setter-admin.php';
 }
 
 // helper functions
-if (file_exists(WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/includes/helper.php')) {
-	require_once WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/includes/helper.php';
+if (file_exists(plugin_dir_path(__FILE__) . 'includes/helper.php')) {
+	require_once plugin_dir_path(__FILE__) . 'includes/helper.php';
 }
 

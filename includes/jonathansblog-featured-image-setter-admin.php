@@ -7,14 +7,14 @@ function jonathansblog_featured_image_setter_admin_stuff(){
 
 function jonathansblog_featured_image_setter_admin_view(){
 	// include admin view
-	if (file_exists(WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/views/jonathansblog-featured-image-setter-admin-view.php')) {
-		require_once WP_PLUGIN_DIR . '/jonathansblog-featured-image-setter/views/jonathansblog-featured-image-setter-admin-view.php';
+	if (file_exists(plugin_dir_path(__FILE__) . 'views/jonathansblog-featured-image-setter-admin-view.php')) {
+		require_once plugin_dir_path(__FILE__) . 'views/jonathansblog-featured-image-setter-admin-view.php';
 	}
 }
 
 
-add_action('admin_post_jonathansblog_featured_image_setter_form_response', 'save_jonathansblog_featured_image_setter_admin_stuff');
-function save_jonathansblog_featured_image_setter_admin_stuff(){
+add_action('admin_post_jonathansblog_featured_image_setter_form_response', 'jonathansblog_featured_image_setter_admin_save_stuff');
+function jonathansblog_featured_image_setter_admin_save_stuff(){
     $url = admin_url('options-general.php?page=Set+Missing+Featured+Images');
         if( !empty( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'jonathansblog-featured-image-setter-form-nonce') ) {
     

@@ -1,6 +1,6 @@
 <?php
 
-function count_all_posts_without_featured_image_set(){
+function jonathansblog_featured_image_setter_count_all_posts_without_featured_image_set(){
     $args = array(
         'post_type'  => 'post',
         'meta_query' => array(
@@ -14,7 +14,7 @@ function count_all_posts_without_featured_image_set(){
     return $query->found_posts;
 }
 
-function count_all_posts_with_featured_image_set(){
+function jonathansblog_featured_image_setter_count_all_posts_with_featured_image_set(){
     $args = array(
         'post_type'  => 'post',
         'meta_query' => array(
@@ -29,7 +29,7 @@ function count_all_posts_with_featured_image_set(){
 }
 
 
-function set_all_posts_without_featured_image_set($image_id){
+function jonathansblog_featured_image_setter_set_all_posts_without_featured_image_set($image_id){
     $args = array(
         'post_type'  => 'post',
         'meta_query' => array(
@@ -53,7 +53,7 @@ function set_all_posts_without_featured_image_set($image_id){
 
 
 
-function show_media_library() {
+function jonathansblog_featured_image_setter_show_media_library() {
     // jQuery
 wp_enqueue_script('jquery');
 // This will enqueue the Media Uploader script
