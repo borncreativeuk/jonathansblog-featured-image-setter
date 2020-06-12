@@ -19,7 +19,7 @@ function save_wordpress_featured_image_setter_admin_stuff(){
         if( !empty( $_POST['_wpnonce'] ) && wp_verify_nonce( $_POST['_wpnonce'], 'wordpress-featured-image-setter-form-nonce') ) {
     
             // sanitize the input
-            echo 'here';
+            print_r($_REQUEST);
             // do the processing
     
 
@@ -28,7 +28,7 @@ function save_wordpress_featured_image_setter_admin_stuff(){
     
             // redirect the user to the appropriate page
             
-            wp_safe_redirect($url); 
+            //wp_safe_redirect($url); 
             exit();
         } else {
             wp_die( __( 'Invalid nonce specified', 'wordpress-featured-image-setter' ), __( 'Error', 'wordpress-featured-image-setter' ), array(
