@@ -14,8 +14,8 @@ if (file_exists(WP_PLUGIN_DIR . '/wordpress-featured-image-setter/vendor/autoloa
 }
 
 // include admin page if present
-if (file_exists(WP_PLUGIN_DIR . '/wordpress-featured-image-setter/include/wordpress-featured-image-setter-admin.php')) {
-	require_once WP_PLUGIN_DIR . '/wordpress-featured-image-setter/include/wordpress-featured-image-setter-admin.php';
+if (file_exists(WP_PLUGIN_DIR . '/wordpress-featured-image-setter/includes/wordpress-featured-image-setter-admin.php')) {
+	require_once WP_PLUGIN_DIR . '/wordpress-featured-image-setter/includes/wordpress-featured-image-setter-admin.php';
 }
 
 register_activation_hook( __FILE__, 'wordpress_featured_image_setter_activate' );
