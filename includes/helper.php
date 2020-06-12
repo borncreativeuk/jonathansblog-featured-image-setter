@@ -35,9 +35,9 @@ wp_enqueue_script('jquery');
 wp_enqueue_media();
 ?>
     <div>
-    <label for="image_url">Image</label>
+    <label for="image_url">Set Featured Image</label>
     <input type="text" name="image_url" id="image_url" class="regular-text">
-    <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Upload Image">
+    <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Select Image">
 
 </div>
 <script type="text/javascript">

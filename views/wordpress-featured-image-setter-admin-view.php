@@ -18,6 +18,7 @@
 </h2>
 <?php
 echo count_all_posts_without_featured_image_set();
+show_media_library();
 ?>
 
 <h2>
@@ -27,5 +28,5 @@ echo count_all_posts_without_featured_image_set();
 echo count_all_posts_with_featured_image_set();
 
 
-show_media_library();
+
 ?>
