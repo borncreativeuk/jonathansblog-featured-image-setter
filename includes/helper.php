@@ -67,8 +67,6 @@ wp_enqueue_media();
 <?php
 wp_nonce_field('wordpress-featured-image-setter-form-nonce');
 ?>
-
-    <label for="image_url">Set Featured Image</label>
     <input type="hidden" name="image_id" id="image_id" class="regular-text">
     <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Select Image">
     <input type="submit" name="apply-btn" id="apply-btn" class="button-primary" value="Apply" style="display:none;">
