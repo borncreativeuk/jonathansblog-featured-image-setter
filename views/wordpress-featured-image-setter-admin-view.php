@@ -8,8 +8,21 @@
 
 ?>
 <h1>
-<?php esc_html_e( 'Wordpress featured image setter.', 'wordpress-featured-image-setter' ); ?>
+<?php esc_html_e( 'Wordpress featured image setter.', 'wordpress-featured-image-setter'); ?>
 </h1>
 
 <p><a href="https://jonathansblog.co.uk">jonathansblog.co.uk</a>
 
+<h2>
+<?php esc_html_e('Posts Without Featured Image Set', 'wordpress-featured-image-setter'); ?>
+</h2>
+<?php
+echo count_all_posts_without_featured_image_set();
+?>
+
+<h2>
+<?php esc_html_e('Posts With Featured Image Set', 'wordpress-featured-image-setter'); ?>
+</h2>
+<?php
+echo count_all_posts_with_featured_image_set();
+?>
