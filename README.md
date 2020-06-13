@@ -1,6 +1,7 @@
 === jonathansblog-featured-image-setter ===
 Contributors: jonathansblog
 Tags: Featured Image
+Tested up to: 5.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -8,6 +9,12 @@ Quickly set the featured image for all posts which dont have one
 
 == Description ==
 Quickly set the featured image for all posts which dont have one
+
+1. Navigate to Settings > Set Featured Images
+1. Click the 'Select Image' button
+1. Click the 'Apply' button that shows once you have selected an image
+
+Enjoy a featured image on all your posts which were missing one.
 
 == Installation ==
 
