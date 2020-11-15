@@ -2,13 +2,13 @@
 
 add_action('admin_menu', 'jonathansblog_featured_image_setter_admin_stuff');
 function jonathansblog_featured_image_setter_admin_stuff(){
-	add_options_page("Set Missing Featured Images", "Set Missing Featured Images", 1, "Set Missing Featured Images", "jonathansblog_featured_image_setter_admin_view");
+	add_options_page("Set Featured Images", "Set Featured Images", 1, "Set Featured Images", "jonathansblog_featured_image_setter_admin_view");
 }
 
 function jonathansblog_featured_image_setter_admin_view(){
 	// include admin view
-	if (file_exists(plugin_dir_path(__FILE__) . 'views/jonathansblog-featured-image-setter-admin-view.php')) {
-		require_once plugin_dir_path(__FILE__) . 'views/jonathansblog-featured-image-setter-admin-view.php';
+	if (file_exists(plugin_dir_path(__FILE__) . '../views/jonathansblog-featured-image-setter-admin-view.php')) {
+		require_once plugin_dir_path(__FILE__) . '../views/jonathansblog-featured-image-setter-admin-view.php';
 	}
 }
 
@@ -21,7 +21,7 @@ function jonathansblog_featured_image_setter_admin_save_stuff(){
             // sanitize the input
             $image_id=absint($_REQUEST['image_id']);
             // do the processing
-            set_all_posts_without_featured_image_set($image_id);
+            jonathansblog_featured_image_setter_set_all_posts_without_featured_image_set($image_id);
             // redirect the user to the appropriate page
             
             wp_safe_redirect($url); 
