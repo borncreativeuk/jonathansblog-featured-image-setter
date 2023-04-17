@@ -2,7 +2,7 @@
 
 add_action('admin_menu', 'jonathansblog_featured_image_setter_admin_stuff');
 function jonathansblog_featured_image_setter_admin_stuff(){
-	add_options_page("Set Featured Images", "Set Featured Images", 1, "Set Featured Images", "jonathansblog_featured_image_setter_admin_view");
+	add_options_page("Set Featured Images", "Set Featured Images", "edit_posts", "Set Featured Images", "jonathansblog_featured_image_setter_admin_view");
 }
 
 function jonathansblog_featured_image_setter_admin_view(){
