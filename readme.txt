@@ -1,5 +1,5 @@
-=== borncreative-featured-image-setter ===
-Contributors: borncreative
+=== Born Creative Featured Image Setter ===
+Contributors: born creative
 Tags: Featured Image
 Tested up to: 6.2
 License: GPLv3 or later
