@@ -26,7 +26,7 @@ Enjoy a featured image on all your posts which were missing one.
 
 == Changelog ==
 
-= 0.2 =
+= 0.2 = 
 Update Release - compatibility with wp 6.2 + rebranding
 
 = 0.1 =
