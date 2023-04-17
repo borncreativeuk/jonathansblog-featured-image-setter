@@ -1,5 +1,5 @@
-=== jonathansblog-featured-image-setter ===
-Contributors: jonathansblog
+=== borncreative-featured-image-setter ===
+Contributors: borncreative
 Tags: Featured Image
 Tested up to: 6.2
 License: GPLv3 or later

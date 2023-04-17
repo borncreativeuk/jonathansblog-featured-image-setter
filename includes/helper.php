@@ -1,6 +1,6 @@
 <?php
 
-function jonathansblog_featured_image_setter_count_all_posts_without_featured_image_set(){
+function borncreative_featured_image_setter_count_all_posts_without_featured_image_set(){
     $args = array(
         'post_type'  => 'post',
         'meta_query' => array(
@@ -14,7 +14,7 @@ function jonathansblog_featured_image_setter_count_all_posts_without_featured_im
     return $query->found_posts;
 }
 
-function jonathansblog_featured_image_setter_count_all_posts_with_featured_image_set(){
+function borncreative_featured_image_setter_count_all_posts_with_featured_image_set(){
     $args = array(
         'post_type'  => 'post',
         'meta_query' => array(
@@ -29,7 +29,7 @@ function jonathansblog_featured_image_setter_count_all_posts_with_featured_image
 }
 
 
-function jonathansblog_featured_image_setter_set_all_posts_without_featured_image_set($image_id){
+function borncreative_featured_image_setter_set_all_posts_without_featured_image_set($image_id){
     $args = array(
         'post_type'  => 'post',
         'meta_query' => array(
@@ -53,7 +53,7 @@ function jonathansblog_featured_image_setter_set_all_posts_without_featured_imag
 
 
 
-function jonathansblog_featured_image_setter_show_media_library() {
+function borncreative_featured_image_setter_show_media_library() {
     // jQuery
 wp_enqueue_script('jquery');
 // This will enqueue the Media Uploader script
@@ -62,10 +62,10 @@ wp_enqueue_media();
 <div>
 
 
-<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" id="jonathansblog-featured-image-setter-form" >			
-	<input type="hidden" name="action" value="jonathansblog_featured_image_setter_form_response">
+<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" id="borncreative-featured-image-setter-form" >			
+	<input type="hidden" name="action" value="borncreative_featured_image_setter_form_response">
 <?php
-wp_nonce_field('jonathansblog-featured-image-setter-form-nonce');
+wp_nonce_field('borncreative-featured-image-setter-form-nonce');
 ?>
     <input type="hidden" name="image_id" id="image_id" class="regular-text">
     <input type="button" name="upload-btn" id="upload-btn" class="button-secondary" value="Select Image">
