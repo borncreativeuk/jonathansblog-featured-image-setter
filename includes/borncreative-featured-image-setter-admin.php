@@ -3,7 +3,27 @@
 add_action('admin_menu', 'borncreative_featured_image_setter_admin_stuff');
 function borncreative_featured_image_setter_admin_stuff()
 {
-	add_options_page("Set Featured Images", "Set Featured Images", "edit_others_posts", "Set Featured Images", "borncreative_featured_image_setter_admin_view");
+
+	add_menu_page(
+        'Born Creative',
+        'Born Creative',
+        'manage_options',
+        'born-creative',
+        '',
+        'dashicons-admin-generic',
+        2
+    );
+    
+    // Create a sub-menu under the top-level menu
+    add_submenu_page(
+        'born-creative',
+        'Set Featured Images',
+        'Set Featured Images',
+        'edit_others_posts',
+        'set-featured-images',
+        'borncreative_featured_image_setter_admin_view'
+    );
+
 }
 
 function borncreative_featured_image_setter_admin_view()
