@@ -10,7 +10,7 @@ Quickly set the featured image for all posts which dont have one
 == Description ==
 Quickly set the featured image for all posts which dont have one
 
-1. Navigate to Settings > Set Featured Images
+1. Navigate to admin > Born Creative > Set Featured Images
 1. Click the 'Select Image' button
 1. Click the 'Apply' button that shows once you have selected an image
 
@@ -20,7 +20,7 @@ Enjoy a featured image on all your posts which were missing one.
 
 1. Add the plugin's directory in the WordPress' plugin directory.
 1. Activate the plugin.
-1. Navigate to Settings > Set Featured Images
+1. Navigate to admin > Born Creative > Set Featured Images
 1. Click the 'Select Image' button
 1. Click the 'Apply' button that shows once you have selected an image
 
