@@ -5,7 +5,7 @@
   Description: plugin to set all posts without featured image to have an image
   Author: Jonathan Mitchell
   Author URI: https://jonathansblog.co.uk/
-  Version: 0.1
+  Version: 0.2
   License: GPL v3 or later
   License URI: https://www.gnu.org/licenses/gpl-3.0.html
 

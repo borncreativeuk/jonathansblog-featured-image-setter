@@ -1,7 +1,7 @@
 === jonathansblog-featured-image-setter ===
 Contributors: jonathansblog
 Tags: Featured Image
-Tested up to: 5.4
+Tested up to: 6.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -25,6 +25,9 @@ Enjoy a featured image on all your posts which were missing one.
 1. Click the 'Apply' button that shows once you have selected an image
 
 == Changelog ==
+
+= 0.2 =
+Update Release - compatibility with wp 6.2
 
 = 0.1 =
 Initial Release
