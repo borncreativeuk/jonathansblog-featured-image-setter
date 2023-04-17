@@ -37,7 +37,7 @@ function borncreative_featured_image_setter_admin_view()
 add_action('admin_post_borncreative_featured_image_setter_form_response', 'borncreative_featured_image_setter_admin_save_stuff');
 function borncreative_featured_image_setter_admin_save_stuff()
 {
-	$url = admin_url('options-general.php?page=Set+Missing+Featured+Images');
+	$url = admin_url('admin.php?page=set-featured-images');
 	if (!empty($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'borncreative-featured-image-setter-form-nonce')) {
 		// sanitize the input
 		$image_id = absint($_REQUEST['image_id']);
