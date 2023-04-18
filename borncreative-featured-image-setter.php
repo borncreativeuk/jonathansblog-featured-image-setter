@@ -4,8 +4,8 @@
 	Plugin URI: https://github.com/localhost8080/borncreative-featured-image-setter
 	Description: plugin to set a featured imageon all posts without
 	Author: Jonathan Mitchell
-	Author URI: https://borncreative.co.uk/
-	Version: 0.2
+	Author URI: https://www.born-creative.co.uk/
+	Version: 0.3
 	License: GPL v3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
