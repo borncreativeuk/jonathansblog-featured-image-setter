@@ -29,8 +29,8 @@ function borncreative_featured_image_setter_admin_stuff()
 function borncreative_featured_image_setter_admin_view()
 {
 	// include admin view
-	if (file_exists(plugin_dir_path(__FILE__) . '../views/borncreative-featured-image-setter-admin-view.php')) {
-		include_once plugin_dir_path(__FILE__) . '../views/borncreative-featured-image-setter-admin-view.php';
+	if (file_exists(plugin_dir_path(__FILE__) . '../views/born-creative-featured-image-setter-admin-view.php')) {
+		include_once plugin_dir_path(__FILE__) . '../views/born-creative-featured-image-setter-admin-view.php';
 	}
 }
 

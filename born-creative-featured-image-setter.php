@@ -24,8 +24,8 @@
  */
 
 // include admin page if present
-if ( file_exists( plugin_dir_path(__FILE__) . 'includes/borncreative-featured-image-setter-admin.php' ) ) {
-	require_once plugin_dir_path(__FILE__) . 'includes/borncreative-featured-image-setter-admin.php';
+if ( file_exists( plugin_dir_path(__FILE__) . 'includes/born-creative-featured-image-setter-admin.php' ) ) {
+	require_once plugin_dir_path(__FILE__) . 'includes/born-creative-featured-image-setter-admin.php';
 }
 
 // helper functions
