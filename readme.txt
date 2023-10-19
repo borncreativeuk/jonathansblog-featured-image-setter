@@ -1,6 +1,7 @@
 === Born Creative Featured Image Setter ===
 Contributors: Born Creative
 Tags: Featured Image
+Stable tag: 1.0
 Tested up to: 6.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html

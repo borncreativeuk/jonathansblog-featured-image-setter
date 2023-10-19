@@ -5,7 +5,7 @@
 	Description: plugin to set a featured image on all posts without
 	Author: Born Creative
 	Author URI: https://www.born-creative.co.uk/
-	Version: 0.3
+	Version: 1.0
 	License: GPL v3 or later
 	License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,6 +22,7 @@
 	You should have received a copy of the GNU General Public License
 	along with Born Creative Featured Image Setter. If not, see https://www.gnu.org/licenses/gpl-3.0.html.
  */
+if (!defined('ABSPATH')) exit; // Exit if accessed directly   
 
 // include admin page if present
 if ( file_exists( plugin_dir_path(__FILE__) . 'includes/born-creative-featured-image-setter-admin.php' ) ) {

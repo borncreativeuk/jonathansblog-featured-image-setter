@@ -1,4 +1,5 @@
 <?php
+if (!defined('ABSPATH')) exit; // Exit if accessed directly   
 
 add_action('admin_menu', 'borncreative_featured_image_setter_admin_stuff');
 function borncreative_featured_image_setter_admin_stuff()

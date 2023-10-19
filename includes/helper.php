@@ -1,4 +1,5 @@
 <?php
+if (!defined('ABSPATH')) exit; // Exit if accessed directly   
 
 function borncreative_featured_image_setter_count_all_posts_without_featured_image_set(){
     $args = array(
