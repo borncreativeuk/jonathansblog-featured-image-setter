@@ -4,26 +4,37 @@ add_action('admin_menu', 'borncreative_featured_image_setter_admin_stuff');
 function borncreative_featured_image_setter_admin_stuff()
 {
 
-	add_menu_page(
-        'Born Creative',
-        'Born Creative',
-        'manage_options',
-        'born-creative',
-        '',
-        'dashicons-admin-generic',
-        2
-    );
-    
-    // Create a sub-menu under the top-level menu
-    add_submenu_page(
-        'born-creative',
-        'Set Featured Images',
-        'Set Featured Images',
-        'edit_others_posts',
-        'set-featured-images',
-        'borncreative_featured_image_setter_admin_view'
-    );
+	// Create a top-level menu if it doesnt already exist
+	if (!menu_page_url('contacts-parent-menu', false)) {
+		add_menu_page(
+			'Born Creative',
+			'Born Creative',
+			'edit_others_posts',
+			'born-creative',
+			false,
+			'dashicons-admin-generic',
+			2
+		);
+		// set our 'main' page
+		add_submenu_page(
+			'born-creative',
+			'Born Creative',
+			'Born Creative',
+			'edit_others_posts',
+			'born-creative',
+			'borncreative_admin_view'
+		);
+	}
 
+	// Create a sub-menu under the top-level menu
+	add_submenu_page(
+		'born-creative',
+		'Set Featured Images',
+		'Set Featured Images',
+		'edit_others_posts',
+		'set-featured-images',
+		'borncreative_featured_image_setter_admin_view'
+	);
 }
 
 function borncreative_featured_image_setter_admin_view()
@@ -31,6 +42,17 @@ function borncreative_featured_image_setter_admin_view()
 	// include admin view
 	if (file_exists(plugin_dir_path(__FILE__) . '../views/born-creative-featured-image-setter-admin-view.php')) {
 		include_once plugin_dir_path(__FILE__) . '../views/born-creative-featured-image-setter-admin-view.php';
+	}
+}
+
+// create function if its not already defined (admin view function can appear from other plugins)
+if (!function_exists('borncreative_admin_view')) {
+	function borncreative_admin_view()
+	{
+		// include admin view
+		if (file_exists(plugin_dir_path(__FILE__) . '../views/born-creative-view.php')) {
+			require_once plugin_dir_path(__FILE__) . '../views/born-creative-view.php';
+		}
 	}
 }
 
