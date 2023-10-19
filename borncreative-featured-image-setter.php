@@ -2,7 +2,7 @@
 /*
 	Plugin name: Born Creative Featured Image Setter
 	Plugin URI: https://github.com/borncreativeuk/jonathansblog-featured-image-setter
-	Description: plugin to set a featured imageon all posts without
+	Description: plugin to set a featured image on all posts without
 	Author: Born Creative
 	Author URI: https://www.born-creative.co.uk/
 	Version: 0.3
