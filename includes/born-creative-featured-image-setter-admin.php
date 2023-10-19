@@ -15,15 +15,7 @@ function borncreative_featured_image_setter_admin_stuff()
 			'dashicons-admin-generic',
 			2
 		);
-		// set our 'main' page
-		// add_submenu_page(
-		// 	'born-creative',
-		// 	'Born Creative',
-		// 	'Born Creative',
-		// 	'edit_others_posts',
-		// 	'born-creative',
-		// 	'borncreative_admin_view'
-		// );
+
 	}
 
 	// Create a sub-menu under the top-level menu
