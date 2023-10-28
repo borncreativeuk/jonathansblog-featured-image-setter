@@ -27,6 +27,9 @@ Enjoy a featured image on all your posts which were missing one.
 
 == Changelog ==
 
+= 1.0 =
+misc updates - menu, etc
+
 = 0.3 =
 Update author url
 
